@@ -1,0 +1,9 @@
+<a class="level-card-wrapper" [ngClass]="{'passed': levelPassed}" href="{{ '/play/' + taskUrl }}">
+  <div class="level-card">
+    <h1>
+      <ng-content></ng-content>
+    </h1>
+    <span class="hidden-text">{{ i18nPrefix + 'PLAY' | translate | uppercase }}</span>
+  </div>
+  <div class="level-card-shadow"></div>
+</a>

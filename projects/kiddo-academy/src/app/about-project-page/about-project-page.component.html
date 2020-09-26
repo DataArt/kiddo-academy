@@ -1,0 +1,15 @@
+<section class="about-project">
+  <kiddo-academy-breadcrumbs>
+    <ul class="breadcrumbs">
+      <li>
+        <a routerLink="/">{{ 'HOME.HOME' | translate | uppercase }}</a>
+      </li>
+      <li>{{ i18nPrefix + 'HEADER' | translate | uppercase }}</li>
+    </ul>
+  </kiddo-academy-breadcrumbs>
+  <h1>{{ i18nPrefix + 'HEADER' | translate }}</h1>
+  <p [innerHTML]="i18nPrefix + 'CONTENT-PARAGRAPH-1' | translate"></p>
+  <p [innerHTML]="i18nPrefix + 'CONTENT-PARAGRAPH-2' | translate: { tutorialsLink1: 'https://t.me/pythonbooks',  tutorialsLink2: 'https://pythonworld.ru/samouchitel-python' }"></p>
+  <p [innerHTML]="i18nPrefix + 'CONTENT-PARAGRAPH-3' | translate: { createLevelLink: '/task-editor' }"></p>
+  <p [innerHTML]="i18nPrefix + 'CONTENT-PARAGRAPH-4' | translate: { copyKiddoLink: '/embed-code' }"></p>
+</section>

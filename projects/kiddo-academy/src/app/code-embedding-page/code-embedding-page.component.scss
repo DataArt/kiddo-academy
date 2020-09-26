@@ -1,0 +1,25 @@
+.code-emebedding {
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.code-emebedding :first-child {
+  margin-top: 0;
+}
+
+.code-emebedding ul.breadcrumbs  {
+  li {
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+}
+
+.code-emebedding ul.breadcrumbs a:hover {
+  color: #9a9e9e;
+}
+
+.bold {
+  font-weight: bold;
+}

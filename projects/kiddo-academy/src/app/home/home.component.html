@@ -1,0 +1,67 @@
+<section class="home">
+  <div class="main-content">
+    <article class="about-project-block">
+      <h1>{{ i18nPrefix + 'ADULTS_TO_YOUNG' | translate }}</h1>
+      <p>{{ i18nPrefix + 'PROJECT_DESCRIPTION' | translate }}</p>
+      <a class="about-project-link btn" routerLink="/about-project">
+        <span>{{ i18nPrefix + 'ABOUT_PROJECT' | translate | uppercase }}</span>
+        <i class="icon-kiddo-academy-arrow-right"></i>
+      </a>
+    </article>
+
+    <section class="about-games-block">
+      <div *ngIf="isFetchingTasks" class="loader-wrapper">
+        <kiddo-academy-loading-spinner></kiddo-academy-loading-spinner>
+      </div>
+
+      <div *ngIf="!isFetchingTasks && scenesList.length === 0" class="message-wrapper">
+        <h2>{{ i18nPrefix + 'SERVER_NOT_AVAILABLE' | translate }}</h2>
+      </div>
+
+      <kiddo-academy-scene-toggle
+        *ngIf="!isFetchingTasks && scenesList.length !== 0"
+        [scenesDetails]="scenesList"
+        (sceneSelected)="handleSceneTypeChange($event)">
+      </kiddo-academy-scene-toggle>
+
+      <h2 *ngIf="scenesList.length !== 0">{{ i18nPrefix + 'LEVELS' | translate }}</h2>
+
+      <kiddo-academy-levels-list *ngIf="!isFetchingTasks && scenesList.length !== 0" [tasksList]="selectedScene.tasks"></kiddo-academy-levels-list>
+    </section>
+  </div>
+
+  <section class="level-launching-section">
+    <h2>{{ i18nPrefix + 'LEVEL-LAUNCHING.HEADER' | translate }}</h2>
+    <p [innerHTML]="i18nPrefix + 'LEVEL-LAUNCHING.INTRODUCTION' | translate: { link: '/launch-level' }"></p>
+  </section>
+
+  <section class="banners-wrapper">
+    <a routerLink="/embed-code" class="banner-embed-code">
+      <kiddo-academy-banner
+        [header]="i18nPrefix + 'BANNERS.EMBED_KIDDO_INTO_SITE' | translate"
+        [buttonText]="i18nPrefix + 'BANNERS.COPY_EMBED_CODE' | translate"
+        [imageSrc]="'/assets/images/banner-open-code.svg'"
+        (buttonClick)="copyKiddoModal.open()"
+      ></kiddo-academy-banner>
+    </a>
+
+    <a href="/task-editor" class="banner-kiddo-author">
+      <kiddo-academy-banner
+        [header]="i18nPrefix + 'BANNERS.BECOME_KIDDO_AUTHOR' | translate"
+        [buttonText]="i18nPrefix + 'BANNERS.MAKE_OWN_LEVEL' | translate"
+        [imageSrc]="'/assets/images/banner-author-kiddo.svg'"
+        (buttonClick)="navigateTo('/task-editor')"
+      ></kiddo-academy-banner>
+    </a>
+  </section>
+</section>
+
+<div class="modal-window" kiddoAcademyModal #copyKiddoModal="kiddoAcademyModal">
+  <kiddo-academy-modal-message
+    [acceptButtonText]="i18nPrefix + 'MODAL_MESSAGE.COPY' | translate"
+    (cancelClick)="copyKiddoModal.close()"
+  >
+    <h1>{{ i18nPrefix + 'MODAL_MESSAGE.COPY_KIDDO' | translate }}</h1>
+    {{ i18nPrefix + 'MODAL_MESSAGE.EMBED_KIDDO_INTO_SITE' | translate }}
+  </kiddo-academy-modal-message>
+</div>

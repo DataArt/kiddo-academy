@@ -1,0 +1,30 @@
+<footer class="footer">
+  <section class="navigation-wrapper">
+    <a routerLink="/">
+      <img src="/assets/images/logo-footer.svg" alt="logo">
+    </a>
+    <div class="navigation-links-wrapper">
+      <ul class="about-links">
+        <li><a routerLink="/about-developers">{{ i18nPrefix + 'ABOUT_DEVELOPERS' | translate }}</a></li>
+        <li><a routerLink="/about-project">{{ i18nPrefix + 'ABOUT_PROJECT' | translate }}</a></li>
+        <li><a href="/task-editor">{{ i18nPrefix + 'ADD_OWN_LEVEL' | translate }}</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="copyright-and-lang-wrapper">
+    <div class="lang-select dropdown" kiddoAcademyDropdown>
+      <div class="dropdown-toggle">
+        <span>{{ currentLang | languageNative | uppercase }}</span>
+        <i class="icon-kiddo-academy-arrow-drop-down"></i>
+      </div>
+      <div class="dropdown-menu dropdown-menu-atop">
+        <ul>
+          <li *ngFor="let lang of allLangs" (click)="handleLangChange(lang)">
+            <span>{{ lang | languageNative | uppercase }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">Kiddo Dataart © 2020</p>
+  </section>
+</footer>

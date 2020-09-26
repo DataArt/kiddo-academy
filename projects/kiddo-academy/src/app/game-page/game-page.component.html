@@ -1,0 +1,52 @@
+<section class="game-page" #gamePage>
+
+  <div *ngIf="fetchingLevelConfiguration" class="loader-wrapper">
+    <kiddo-academy-loading-spinner></kiddo-academy-loading-spinner>
+  </div>
+
+  <div class="main-content" [ngClass]="{ hidden: fetchingLevelConfiguration }">
+    <div class="navigation">
+      <kiddo-academy-breadcrumbs class="breadcrumbs">
+        <ul>
+          <li>
+            <a routerLink="/">{{ i18nPrefix + 'SCENE_TYPE.' + sceneName| uppercase | translate | uppercase}}</a>
+          </li>
+          <li>{{ (i18nPrefix + 'LEVEL' | translate) + ' ' + (levelName | extractNumber) | uppercase }}</li>
+        </ul>
+      </kiddo-academy-breadcrumbs>
+
+      <div class="level-navigation">
+        <span>|</span>
+        <kiddo-academy-tooltip [text]="i18nPrefix + 'TOOLTIP.PREVIOUS_LEVEL'" position="bottom" class="navigation-arrow">
+          <i class="icon-kiddo-academy-arrow-left-free" [ngClass]="{disabled: !this.neighboringLevels.previous}" (click)="onPreviousLevelClick()"></i>
+        </kiddo-academy-tooltip>
+
+        <kiddo-academy-tooltip [text]="i18nPrefix + 'TOOLTIP.NEXT_LEVEL'" position="bottom" class="navigation-arrow">
+          <i class="icon-kiddo-academy-arrow-right-free" [ngClass]="{disabled: !this.neighboringLevels.next}" (click)="onNextLevelClick()"></i>
+        </kiddo-academy-tooltip>
+      </div>
+    </div>
+
+    <h3>
+      <markdown [data]="levelDescription"></markdown>
+    </h3>
+
+    <div class="player-wrapper">
+      <h2 *ngIf="fetchingLevelError" class="fetching-level-error-block">
+        {{i18nPrefix + 'LEVEL_FETCH_ERROR' | translate}}
+      </h2>
+      <kiddo-player
+        #player
+        [attr.kiddo-scene-config]="levelConfigurationUrl"
+        [attr.kiddo-app-config]="playerAppConfig"
+      ></kiddo-player>
+    </div>
+  </div>
+
+</section>
+
+<div class="modal-window" kiddoAcademyModal #mobileWarningModal="kiddoAcademyModal">
+  <kiddo-academy-modal-message (acceptClick)="mobileWarningModal.close()" (cancelClick)="mobileWarningModal.close()">
+    <p [innerHTML]="i18nPrefix + 'USING_MOBILE_WARNING' | translate: { link: router.url }"></p>
+  </kiddo-academy-modal-message>
+</div>

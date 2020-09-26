@@ -1,0 +1,87 @@
+@import 'styles/icon-fonts';
+@import 'styles/fonts';
+@import 'styles/dropdown';
+@import 'styles/modal';
+@import 'styles/variables.scss';
+@import 'styles/breadcrumbs.scss';
+
+html {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'futura_pt_book';
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: 2.55em;
+  line-height: 1.04em;
+}
+
+h2 {
+  font-size: 1.44em;
+  line-height: 1.23em;
+}
+
+h3 {
+  font-size: 1.22em;
+  line-height: 1.27em;
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.77em;
+  line-height: 1.14em;
+  letter-spacing: 0.81px;
+  color: #12171a;
+  border: none;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  font-size: 0.77em;
+  line-height: 1.14em;
+  letter-spacing: 0.81px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #12171a;
+  cursor: pointer;
+}
+
+.btn i {
+  margin-left: 0.5em;
+}
+
+.i18n-link {
+  color: inherit;
+}
+
+@media screen and (max-width: map-get($screen-breakpoints, xl)) {
+  html,
+  body {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: map-get($screen-breakpoints, xl)) {
+  html,
+  body {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: map-get($screen-breakpoints, xxl)) {
+  html,
+  body {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

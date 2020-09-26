@@ -1,0 +1,47 @@
+.modal-message {
+  color: #000;
+  background-color: #fff;
+  box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.75);
+}
+
+.modal-header .icon-kiddo-academy-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 120px;
+  font-weight: 400;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+
+  .button-accept {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    color: #ffffff;
+    background-color: #725198;
+    cursor: pointer;
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.25em;
+  cursor: pointer;
+  color: #000;
+}

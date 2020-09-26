@@ -1,0 +1,47 @@
+@import "../../../styles/variables.scss";
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2em;
+  padding-right: 0;
+}
+
+.banner img {
+  width: 40%;
+}
+
+.banner h2 {
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.banner .information-block {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner .btn i {
+  margin-left: 0.5em;
+}
+
+@media screen and (max-width: map-get($screen-breakpoints, md)) {
+  .banner {
+    padding: 1em;
+  }
+
+  .banner img {
+    display: none;
+  }
+
+  .banner .information-block {
+    flex-basis: 90%;
+  }
+}

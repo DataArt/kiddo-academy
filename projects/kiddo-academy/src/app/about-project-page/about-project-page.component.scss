@@ -1,0 +1,21 @@
+.about-project {
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.about-project :first-child {
+  margin-top: 0;
+}
+
+.about-project ul.breadcrumbs  {
+  li {
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+}
+
+.about-project ul.breadcrumbs a:hover {
+  color: #9a9e9e;
+}

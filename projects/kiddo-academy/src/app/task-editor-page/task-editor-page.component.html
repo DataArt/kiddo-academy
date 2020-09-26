@@ -1,0 +1,20 @@
+<section class="task-editor-page" #taskEditorPage>
+  <kiddo-academy-breadcrumbs>
+    <ul class="breadcrumbs">
+      <li>
+        <a routerLink="/">{{ 'HOME.HOME' | translate | uppercase }}</a>
+      </li>
+      <li>{{ 'TASK-EDITOR.TITLE' | translate | uppercase }}</li>
+    </ul>
+  </kiddo-academy-breadcrumbs>
+
+  <div class="player-wrapper">
+    <kiddo-player #player [attr.kiddo-app-config]="playerAppConfig"></kiddo-player>
+  </div>
+</section>
+
+<div class="modal-window" kiddoAcademyModal #mobileWarningModal="kiddoAcademyModal">
+  <kiddo-academy-modal-message (acceptClick)="mobileWarningModal.close()" (cancelClick)="mobileWarningModal.close()">
+    <p [innerHTML]="i18nPrefix + 'USING_MOBILE_WARNING' | translate: { link: '#' }"></p>
+  </kiddo-academy-modal-message>
+</div>

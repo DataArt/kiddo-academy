@@ -1,0 +1,31 @@
+<section class="level-testing-page" #levelTestingPage>
+  <div class="main-content">
+    <kiddo-academy-breadcrumbs class="breadcrumbs">
+      <ul class="breadcrumbs">
+        <li>
+          <a routerLink="/">{{ 'HOME.HOME' | translate | uppercase }}</a>
+        </li>
+        <li>{{ i18nPrefixPath + 'HEADER' | translate | uppercase }}</li>
+      </ul>
+    </kiddo-academy-breadcrumbs>
+
+    <p [innerHTML]="i18nPrefixPath + 'INTRODUCTION' | translate"></p>
+
+    <div class="ide-wrapper">
+      <ace
+        #aceComponent
+        [config]="editorConfig"
+        [theme]="'tomorrow_night_eighties'"
+        [(value)]="levelConfigurationCode">
+      </ace>
+    </div>
+
+    <button class="btn launch-button" (click)="onLaunchLevelClick(levelConfigurationCode)">
+      {{ i18nPrefixPath + 'LAUNCH' | translate }}
+    </button>
+
+    <div class="player-wrapper" #playerWrapper>
+      <kiddo-player #player [attr.kiddo-app-config]="playerAppConfig"></kiddo-player>
+    </div>
+  </div>
+</section>

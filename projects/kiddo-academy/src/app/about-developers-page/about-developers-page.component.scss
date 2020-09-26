@@ -1,0 +1,21 @@
+.about-developers {
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.about-developers :first-child {
+  margin-top: 0;
+}
+
+.about-developers ul.breadcrumbs  {
+  li {
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+}
+
+.about-developers ul.breadcrumbs a:hover {
+  color: #9a9e9e;
+}

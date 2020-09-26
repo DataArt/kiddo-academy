@@ -1,0 +1,11 @@
+<div *ngIf="isLoading" class="loader-wrapper">
+  <kiddo-academy-loading-spinner></kiddo-academy-loading-spinner>
+</div>
+
+<section *ngIf="!isLoading" class="kiddo-academy">
+  <kiddo-academy-header></kiddo-academy-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <kiddo-academy-footer></kiddo-academy-footer>
+</section>

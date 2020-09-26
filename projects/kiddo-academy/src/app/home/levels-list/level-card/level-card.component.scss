@@ -1,0 +1,80 @@
+.level-card-wrapper {
+  display: block;
+  position: relative;
+  margin-right: 1.4rem;
+  margin-bottom: 1.4rem;
+  box-sizing: border-box;
+
+  &.passed {
+    .level-card {
+      background-image: url('/assets/images/check-icon.jpg');
+      background-position: 95% 13%;
+      background-size: 40%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.level-card {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 5.7rem;
+  padding-top: 0.4rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  border: solid 1px #12171a;
+  background-color: #ffffff;
+  transition: all 0.3s linear 0s;
+}
+
+.level-card h1 {
+  margin: 0;
+  margin-bottom: 0.8rem;
+}
+
+.level-card .hidden-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+  padding-left: 0.8rem;
+  opacity: 0;
+  font-weight: bolder;
+  font-size: 0.77em;
+  line-height: 0.88em;
+  letter-spacing: 0.81px;
+  box-sizing: border-box;
+}
+
+.level-card .hidden-text:hover {
+  opacity: 1;
+}
+
+.level-card:hover {
+  top: -0.33em;
+  left: -0.33em;
+  transition: all 0.3s;
+}
+
+.level-card-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c4c5e8;
+  z-index: -1;
+}
+
+.level-card-shadow:hover {
+  opacity: 1;
+}

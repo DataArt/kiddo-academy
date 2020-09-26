@@ -1,0 +1,31 @@
+<article>
+  <div class="scene-details">
+    <div class="scene-description">
+      <div class="levels-number">
+        <div class="round-icon"></div>
+        <span>
+          {{
+            (i18nPrefix + 'LEVELS' | translate | uppercase) + ': ' +  selectedScene.tasks?.length
+          }}
+        </span>
+      </div>
+      <div>
+        <h1>{{ i18nPrefix + selectedScene.title | uppercase | translate | titlecase }}</h1>
+        <p>{{ i18nPrefix + selectedScene.description | uppercase | translate }}</p>
+      </div>
+    </div>
+
+    <img src="{{ selectedScene.imageUrl }}" alt="{{ i18nPrefix + selectedScene.title | uppercase | translate | titlecase }}">
+  </div>
+
+  <div class="tabs-toggle-group">
+    <button
+      *ngFor="let scene of scenesDetails; index as i"
+      class="tab btn"
+      [ngClass]="{ active: scenesDetails.indexOf(selectedScene) === i }"
+      (click)="onSelectScene(i)"
+    >
+      {{ i18nPrefix + scene.title | uppercase | translate | uppercase }}
+    </button>
+  </div>
+</article>

@@ -1,0 +1,39 @@
+<section class="scene-configuration-help" #sceneConfigurationHelp>
+  <kiddo-academy-breadcrumbs>
+    <ul class="breadcrumbs">
+      <li>
+        <a routerLink="/">{{ 'HOME.HOME' | translate | uppercase }}</a>
+      </li>
+      <li>{{ i18nPrefixPath + 'HEADER' | translate | uppercase }}</li>
+    </ul>
+  </kiddo-academy-breadcrumbs>
+
+  <div *ngIf="isLoading" class="loader-wrapper">
+    <kiddo-academy-loading-spinner></kiddo-academy-loading-spinner>
+  </div>
+
+  <div class="main-content" [ngClass]="{ hidden: isLoading }">
+    <div class="sidebar">
+      <ul>
+        <li
+          *ngFor="let scene of scenesList"
+          [routerLink]='"."'
+          [fragment]="scene"
+          [ngClass]="{ active: activeSection === scene }"
+        >
+          {{ 'SCENE_TYPE.' + scene | uppercase | translate | titlecase }}
+        </li>
+      </ul>
+    </div>
+    <div class="help-text">
+      <div *ngFor="let scene of scenesList">
+        <h2 [attr.id]="scene">{{ 'SCENE_TYPE.' + scene | uppercase | translate | titlecase }}</h2>
+        <markdown
+          [src]="i18nPrefixPath + (scene | uppercase) + '_HELP' | translate : { assetsPath: env.playerAssetsUrl, timestamp: timestamp }"
+          (load)="onMarkdownLoad($event)"
+        >
+        </markdown>
+      </div>
+    </div>
+  </div>
+</section>

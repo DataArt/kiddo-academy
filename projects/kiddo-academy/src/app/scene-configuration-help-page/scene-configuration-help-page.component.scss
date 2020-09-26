@@ -1,0 +1,83 @@
+@import '../../styles/variables.scss';
+
+.scene-configuration-help {
+  padding: 2.5rem;
+  padding-top: 1rem;
+}
+
+.scene-configuration-help ul.breadcrumbs {
+  li {
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+}
+
+.scene-configuration-help ul.breadcrumbs a:hover {
+  color: #9a9e9e;
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.main-content .sidebar {
+  flex-basis: 15%;
+  padding: 0.4em;
+  background-color: #f2f6f6;
+
+  ul {
+    list-style: none;
+  }
+
+  ul:first-child {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    margin-bottom: 0.5em;
+    cursor: pointer;
+    outline: none;
+  }
+
+  ul li.active {
+    font-weight: bold;
+  }
+}
+
+.main-content .help-text {
+  flex-basis: 80%;
+  overflow: auto;
+}
+
+.main-content .help-text h2 {
+  margin: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: map-get($screen-breakpoints, sm)) {
+  .main-content {
+    display: block;
+  }
+
+  .main-content .sidebar {
+    margin-bottom: 1rem;
+    // display: none;
+  }
+}

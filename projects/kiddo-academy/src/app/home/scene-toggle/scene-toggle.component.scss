@@ -1,0 +1,139 @@
+@import "../../../styles/variables.scss";
+
+.scene-details {
+  display: flex;
+  justify-content: space-between;
+  height: 20rem;
+  padding: 1rem;
+  border: solid 1px #12171a;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.scene-details img {
+  width: 40%;
+}
+
+.levels-number {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.round-icon {
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  background-color: #12171a;
+  border-radius: 50%;
+}
+
+.scene-description {
+  display: flex;
+  flex-direction: column;
+  min-width: 60%;
+}
+
+.scene-description h1 {
+  width: max-content;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tabs-toggle-group {
+  display: flex;
+  height: 2.7rem;
+}
+
+.tabs-toggle-group .tab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 9.3rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  text-align: center;
+  border: none;
+  font-weight: bolder;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  outline: none;
+
+}
+
+.tabs-toggle-group .tab:after {
+  position: absolute;
+  right: -6%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  z-index: -1;
+  background-color: inherit;
+  transform: skewX(-20deg);
+}
+
+.tabs-toggle-group .tab:first-child {
+  padding-left: 0;
+  background-color: #00b3a9;
+  z-index: 30;
+}
+.tabs-toggle-group .tab:nth-child(2) {
+  background-color: #f0503c;
+  z-index: 20;
+}
+.tabs-toggle-group .tab:nth-child(3) {
+  background-color: #c4c5e8;
+  z-index: 10;
+}
+
+.tabs-toggle-group .tab.active {
+  margin-top: -1px;
+  border-top: solid 1px #12171a;
+  background-color: #ffffff;
+  border-left: solid 1px #12171a;
+}
+
+.tabs-toggle-group .tab:first-child.active {
+  border-top: 1px solid transparent;
+ }
+
+.tabs-toggle-group .tab.active:after {
+  position: absolute;
+  right: -6%;
+  top: -1%;
+  margin-top: -1px;
+  border: 1px solid #12171a;
+  border-top: 1px solid #ffffff;
+  background-color: #ffffff;
+  transform: skewX(-20deg);
+}
+
+.tabs-toggle-group .tab:first-child.active:after {
+  border-left: none;
+}
+
+@media screen and (max-width: map-get($screen-breakpoints, sm)) {
+  .scene-details {
+    display: block;
+  }
+
+  .scene-details img {
+    display: none;
+  }
+
+  .tabs-toggle-group .tab {
+    width: 5rem;
+  }
+
+  .tabs-toggle-group .tab:first-child {
+    padding-left: 1.2rem;
+  }
+
+  .tabs-toggle-group .tab.active:after,
+  .tabs-toggle-group .tab:after {
+    right: -10%;
+  }
+}

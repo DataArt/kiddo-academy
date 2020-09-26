@@ -1,0 +1,10 @@
+<article class="banner">
+  <div class="information-block">
+    <h2>{{ header }}</h2>
+    <div class="btn" (click)="onButtonClick()">
+      <span>{{ buttonText | uppercase }}</span>
+      <i *ngIf="buttonText" class="icon-kiddo-academy-arrow-right"></i>
+    </div>
+  </div>
+  <img src="{{ imageSrc }}" alt="">
+</article>

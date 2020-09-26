@@ -1,0 +1,143 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "kiddo-academy": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/kiddo-academy",
+      "sourceRoot": "projects/kiddo-academy/src",
+      "prefix": "kiddo-academy",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/kiddo-academy",
+            "index": "projects/kiddo-academy/src/index.html",
+            "main": "projects/kiddo-academy/src/main.ts",
+            "polyfills": "projects/kiddo-academy/src/polyfills.ts",
+            "tsConfig": "projects/kiddo-academy/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/kiddo-academy/src/favicon.ico",
+              "projects/kiddo-academy/src/assets"
+            ],
+            "styles": [
+              "projects/kiddo-academy/src/styles.scss",
+              "node_modules/prismjs/themes/prism-solarizedlight.css"
+            ],
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-python.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/kiddo-academy/src/environments/environment.ts",
+                  "with": "projects/kiddo-academy/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/kiddo-academy/src/environments/environment.ts",
+                  "with": "projects/kiddo-academy/src/environments/environment.test.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "kiddo-academy:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "kiddo-academy:build:production"
+            },
+            "test": {
+              "browserTarget": "kiddo-academy:build:test"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "kiddo-academy:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/kiddo-academy/src/test.ts",
+            "polyfills": "projects/kiddo-academy/src/polyfills.ts",
+            "tsConfig": "projects/kiddo-academy/tsconfig.spec.json",
+            "karmaConfig": "projects/kiddo-academy/karma.conf.js",
+            "assets": [
+              "projects/kiddo-academy/src/favicon.ico",
+              "projects/kiddo-academy/src/assets"
+            ],
+            "styles": [
+              "projects/kiddo-academy/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/kiddo-academy/tsconfig.app.json",
+              "projects/kiddo-academy/tsconfig.spec.json",
+              "projects/kiddo-academy/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/kiddo-academy/e2e/protractor.conf.js",
+            "devServerTarget": "kiddo-academy:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "kiddo-academy:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "kiddo-academy"
+}

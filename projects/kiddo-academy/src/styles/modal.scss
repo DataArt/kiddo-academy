@@ -1,0 +1,33 @@
+@import "../styles/variables.scss";
+
+.modal-window-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 23, 26, 0.8);
+  z-index: 1000;
+}
+
+.modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 25rem;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
+}
+
+.modal-window-closed,
+.modal-window-closed + .modal-window-overlay {
+  display: none;
+}
+
+@media screen and (max-width: map-get($screen-breakpoints, sm)) {
+  .modal-window {
+    min-width: 85%;
+  }
+}

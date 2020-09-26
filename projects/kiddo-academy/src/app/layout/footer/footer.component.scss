@@ -1,0 +1,79 @@
+@import "../../../styles/variables.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+  background-color: #f2f6f6;
+  font-size: 0.88em;
+  color: #12171a;
+}
+
+.navigation-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.navigation-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+}
+
+.navigation-links-wrapper ul {
+  list-style: none;
+  font-weight: bolder;
+}
+
+.navigation-links-wrapper ul > li {
+  margin-right: 7%;
+}
+
+.navigation-links-wrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.about-links {
+  display: flex;
+}
+
+.game-types-links li {
+  margin-bottom: 0.5rem;
+}
+
+.copyright-and-lang-wrapper {
+  display: flex;
+}
+
+.lang-select {
+  display: flex;
+  align-items: center;
+  width: 5.77em;
+  font-size: 0.76em;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.lang-select .dropdown-icon {
+  font-size: 1.33em;
+}
+
+.copyright {
+  color: #788285;
+}
+
+@media screen and (max-width: map-get($screen-breakpoints, sm)) {
+  .about-links {
+    display: block;
+  }
+
+  .navigation-links-wrapper ul > li {
+    margin-bottom: 0.5rem;
+  }
+}

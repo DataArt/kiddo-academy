@@ -1,0 +1,10 @@
+<section class="levels-list">
+  <kiddo-academy-level-card
+    *ngFor="let taskUrl of tasksList; index as i"
+    [taskUrl]="taskUrl"
+    [levelNumber]="i + 1"
+    [passedLevels]="passedLevelsList"
+  >
+    {{ i + 1 }}
+  </kiddo-academy-level-card>
+</section>
