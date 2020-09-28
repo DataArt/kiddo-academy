@@ -37,20 +37,14 @@ export class ScenesService {
 
     return this.http
       .get<string[]>(`${environment.sceneTypesUrl}/index.json`)
-      .toPromise()
-      .then(
-        fetchedData => {
-          this.scenesUrls = fetchedData;
-          return this.scenesUrls;
-        },
-        error => {
-          console.log(error);
-          return [];
-        }
-      );
+      .toPromise();
   }
 
-  fetchAllScenesDetails(): Promise<SceneDetails[]> {
+  setSceneUrls(scenesUrls: string[]): void {
+    this.scenesUrls = scenesUrls;
+  }
+
+  async fetchAllScenesDetails(): Promise<SceneDetails[]> {
     this.scenesList = [];
 
     const promisifiedRequests = this.scenesUrls.map(sceneUrl =>
@@ -58,16 +52,14 @@ export class ScenesService {
         .get<SceneDetails>(`${environment.sceneTypesUrl}/${this.i18nService.getCurrentLanguage()}/${sceneUrl}/index.json`)
         .toPromise());
 
-    return Promise.all(promisifiedRequests)
-      .then(responses => {
-        responses.forEach((sceneDetails, index) => {
-          this.scenesList.push({
-            ...sceneDetails,
-            tasks: sceneDetails.tasks.map(item => `${this.scenesUrls[index]}/${item}`)
-          });
-        });
-        return this.scenesList;
+    const responses = await Promise.all(promisifiedRequests);
+    responses.forEach((sceneDetails, index) => {
+      this.scenesList.push({
+        ...sceneDetails,
+        tasks: sceneDetails.tasks.map(item => `${this.scenesUrls[index]}/${item}`)
       });
+    });
+    return this.scenesList;
   }
 
   fetchLevelConfiguration(levelConfigurationUrl: string): Promise<string> {

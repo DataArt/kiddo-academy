@@ -18,7 +18,7 @@ export class SceneConfigurationHelpPageComponent implements OnInit {
   env = environment;
   isLoading = false;
   scenesList: string[] = [];
-  loadedMarkdownsNumber = 0;
+  loadedMarkdownsCount = 0;
   readonly i18nPrefixPath = 'SCENE-CONFIGURATION-HELP-PAGE.';
   timestamp!: number;
 
@@ -29,19 +29,20 @@ export class SceneConfigurationHelpPageComponent implements OnInit {
     private i18n: I18nService
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.isLoading = true;
 
     this.timestamp = this.i18n.getTimestamp();
 
-    this.http.get<string[]>(`${environment.sceneTypesUrl}/index.json?timestamp=${this.timestamp}`)
-      .toPromise()
-      .then(scenesList => this.scenesList = scenesList);
+    const scenesList = await this.http.get<string[]>(`${environment.sceneTypesUrl}/index.json?timestamp=${this.timestamp}`)
+      .toPromise();
+    
+    this.scenesList = scenesList;
   }
 
-  onMarkdownLoad(markdownText: string): void {
-    this.loadedMarkdownsNumber++;
-    if (this.loadedMarkdownsNumber === this.scenesList.length) {
+  onMarkdownLoad(): void {
+    this.loadedMarkdownsCount++;
+    if (this.loadedMarkdownsCount === this.scenesList.length) {
       this.isLoading = false;
       this.scrollViewToFragment(this.activatedRoute.snapshot.fragment);
 

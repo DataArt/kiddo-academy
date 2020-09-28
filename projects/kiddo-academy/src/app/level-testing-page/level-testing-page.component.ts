@@ -32,19 +32,18 @@ export class LevelTestingPageComponent implements OnInit, OnDestroy {
     private i18nService: I18nService,
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.levelTestingPageRef.nativeElement.scrollIntoView();
 
     this.updatePlayerLanguageConfig(this.i18nService.getCurrentLanguage());
     this.playerAppConfig = JSON.stringify(this.gamePlayerService.getPlayerAppConfiguration());
 
-    this.i18nService.translateAsync(this.i18nPrefixPath)('INITIAL_CODE')
-      .then(translatedText => {
-        if (!this.levelConfigurationCode) {
-          this.levelConfigurationCode = translatedText;
-        }
-      });
+    const translatedText = await this.i18nService.translateAsync(this.i18nPrefixPath)('INITIAL_CODE');
 
+    if (!this.levelConfigurationCode) {
+      this.levelConfigurationCode = translatedText;
+    }
+      
     this.removeLangChangeListener = this.renderer.listen('document', 'LangChangeEvent', event => {
       this.updatePlayerLanguageConfig(event.detail.lang);
       this.playerAppConfig = JSON.stringify(this.gamePlayerService.getPlayerAppConfiguration());

@@ -1,6 +1,4 @@
 import { Component, OnInit, ViewChild, Renderer2, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
-
 import { ModalDirective } from '../shared/directives/modal.directive';
 import { ScenesService } from '../shared/services/scenes.service';
 import { SceneDetails } from '../shared/interfaces';
@@ -23,7 +21,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private renderer: Renderer2,
-    private router: Router,
     private scenesService: ScenesService,
   ) { }
 
@@ -45,25 +42,26 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.scenesService.setLastSelectedSceneIndex(selectedSceneIndex.toString());
   }
 
-  navigateTo(route: string): void {
-    this.router.navigate([route]);
-  }
-
   navigateWithPageReloadTo(route: string): void {
     window.location.href = route;
   }
 
-  private fetchTasks(): void {
+  private async fetchTasks(): Promise<void> {
     this.isFetchingTasks = true;
 
-    this.scenesService
-      .fetchScenesUrls()
-      .then(() => this.scenesService.fetchAllScenesDetails())
-      .then(scenesList => {
-        this.scenesList = scenesList;
-        this.selectedScene = scenesList[this.scenesService.getLastSelectedSceneIndex()];
-      })
-      .finally(() => this.isFetchingTasks = false);
+    try {
+      const sceneUrls = await this.scenesService.fetchScenesUrls();
+      this.scenesService.setSceneUrls(sceneUrls);
+
+      const scenesList = await this.scenesService.fetchAllScenesDetails();
+      this.scenesList = scenesList;
+
+      this.selectedScene = scenesList[this.scenesService.getLastSelectedSceneIndex()];
+    } catch (error) {
+      console.log(error);
+    } finally {
+      this.isFetchingTasks = false;
+    }
   }
 
 }
