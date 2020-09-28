@@ -37,20 +37,14 @@ export class ScenesService {
 
     return this.http
       .get<string[]>(`${environment.sceneTypesUrl}/index.json`)
-      .toPromise()
-      .then(
-        fetchedData => {
-          this.scenesUrls = fetchedData;
-          return this.scenesUrls;
-        },
-        error => {
-          console.log(error);
-          return [];
-        }
-      );
+      .toPromise();
   }
 
-  fetchAllScenesDetails(): Promise<SceneDetails[]> {
+  setSceneUrls(scenesUrls: string[]): void {
+    this.scenesUrls = scenesUrls;
+  }
+
+  async fetchAllScenesDetails(): Promise<SceneDetails[]> {
     this.scenesList = [];
 
     const promisifiedRequests = this.scenesUrls.map(sceneUrl =>
