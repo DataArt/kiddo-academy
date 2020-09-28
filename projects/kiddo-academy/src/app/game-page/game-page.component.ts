@@ -103,10 +103,10 @@ export class GamePageComponent implements OnInit, AfterViewInit, OnDestroy {
     const currentLevelIndex = sceneDetails.tasks.findIndex(level => level === levelName);
     if (currentLevelIndex !== -1) {
       this.neighboringLevels.previous = sceneDetails.tasks[currentLevelIndex - 1]
-        ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex - 1]}?levelNumber=${currentLevelIndex}`
+        ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex - 1]}`
         : '';
       this.neighboringLevels.next = sceneDetails.tasks[currentLevelIndex + 1]
-        ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex + 1]}?levelNumber=${currentLevelIndex + 2}`
+        ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex + 1]}`
         : '';
     }
       
