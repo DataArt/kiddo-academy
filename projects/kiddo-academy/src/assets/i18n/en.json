@@ -5,14 +5,14 @@
     "PANDEMIC_HERO": "Pandemic hero"
   },
   "HEADER": {
-    "ABOUT_DEVELOPERS": "About the developers",
-    "ABOUT_PROJECT": "About the project",
-    "ADD_OWN_LEVEL": "Add your own level"
+    "ABOUT_DEVELOPERS": "Team",
+    "ABOUT_PROJECT": "About",
+    "ADD_OWN_LEVEL": "Add Your Own Level"
   },
   "FOOTER": {
-    "ABOUT_DEVELOPERS": "About the developers",
-    "ABOUT_PROJECT": "About the project",
-    "ADD_OWN_LEVEL": "Add your own level",
+    "ABOUT_DEVELOPERS": "Team",
+    "ABOUT_PROJECT": "About",
+    "ADD_OWN_LEVEL": "Add Your Own Level",
     "SCENE_TYPE": {
       "RACCOON": "Raccoon",
       "CONSOLE": "Console",
@@ -22,8 +22,8 @@
   "HOME": {
     "HOME": "Main page",
     "ADULTS_TO_YOUNG": "From the adult to the young ",
-    "PROJECT_DESCRIPTION": "Kiddo is a platform used by adults to make up tasks and by kids to do them to learn how to program using Python.",
-    "ABOUT_PROJECT": "About the project",
+    "PROJECT_DESCRIPTION": "Kiddo is a platform used by adults to make up tasks and by kids to do them and learn how to program using Python.",
+    "ABOUT_PROJECT": "About",
     "LEVELS": "Levels:",
     "BANNERS": {
       "EMBED_KIDDO_INTO_SITE": "You can embed Kiddo into your site",
@@ -40,7 +40,7 @@
       "COPY": "Copy",
       "EMBED_KIDDO_INTO_SITE": "You can embed Kiddo into your site"
     },
-    "SERVER_NOT_AVAILABLE": "The server is not currently available"
+    "SERVER_NOT_AVAILABLE": "The server is currently unavailable"
   },
   "SCENE_TOGGLE": {
     "LEVEL": "Level",
@@ -53,7 +53,7 @@
     "PANDEMIC_HERO_DESCRIPTION": "Kiddo was created during the COVID-19 pandemic by engineers who had to keep their kids busy. To honour that tough time we have developed new levels including Pandemic Hero who does not only solve tasks but he also behaves appropriately from a medical point of view."
   },
   "PAGE_NOT_FOUND": {
-    "HEADER": "Oops! The page is not found",
+    "HEADER": "Oops! The page cannot be found",
     "CONTENT": "Try and go to the <a href='/'>home page</a>. If you think you need help, write to us to <a href='mailto:kiddo@dataart.com'>kiddo@dataart.com</a>."
   },
   "MODAL": {
@@ -81,18 +81,18 @@
     "USING_MOBILE_WARNING": "If you log in using your mobile and the page looks inconvenient to use, beware, it does not just seem to be such but it really is! Please, copy the <a href='{{ link }}'>link</a> to log in using your desktop. By using the mobile you will never get the same pleasure as you could using your desktop and opening the page full version."
   },
   "ABOUT-PROJECT-PAGE": {
-    "HEADER": "About the project",
+    "HEADER": "About",
     "CONTENT-PARAGRAPH-1": "Kiddo is a child of self-isolation. DataArt was forced to switch onto remote work mode due to the pandemic outbreak in spring, 2020. That was a challenge to accept, especially for parents, who were supposed to succeed in entertaining their kids. That gave birth to Kiddo, a platform to let parents-engineers make up tasks and teach their kids programming in Python.",
-    "CONTENT-PARAGRAPH-2": "Currently, Kiddo is not meant to teach programming from scratch. To solve the simplest tasks you need to learn the basics. However, there are a lot of easy-to read books for newbies online (<a href='{{ tutorialsLink1 }}' target='_blank' rel='nofollow'>Python Books</a> channel or <a href='{{ tutorialsLink2 }}' target='_blank' rel='nofollow'>pythonworld.ru</a> website) and any kid can sort out how to solve tasks in Kiddo within a couple of days – on top of that, we are ready to provide hints.",
-    "CONTENT-PARAGRAPH-3": "We meant it from the very beginning that <a href='{{ createLevelLink }}'>anybody</a> should be able to work with Kiddo. Tasks are written in JavaScript and their complexity depends only on how imaginative and vigorous the author is. To create tasks with a graphic field ready-to-use images sets can be used as well as new ones be created.",
+    "CONTENT-PARAGRAPH-2": "Currently, Kiddo is not meant to teach programming from scratch. To solve the simplest tasks you need to learn the basics. However, there are a lot of easy-to-read books for newbies online (<a href='{{ tutorialsLink1 }}' target='_blank' rel='nofollow'>Python Books</a> channel or <a href='{{ tutorialsLink2 }}' target='_blank' rel='nofollow'>pythonworld.ru</a> website) and any kid can sort out how to solve tasks in Kiddo within a couple of days – on top of that, we are ready to provide hints.",
+    "CONTENT-PARAGRAPH-3": "We meant it from the very beginning that <a href='{{ createLevelLink }}'>anybody</a> should be able to work with Kiddo. Tasks are written in JavaScript and their complexity depends only on how imaginative and vigorous the author is. To create tasks with a graphic field, ready-to-use images sets can be used as well as new ones be created.",
     "CONTENT-PARAGRAPH-4": "Last but not least. We allow building Kiddo into any site that aims at teaching kids Python. You just need to copy the <a href='{{ copyKiddoLink }}'>embed code</a>, the same way as you do with YouTube player. If you feel like adding something of your own to Kiddo for it to form an integral part of your site, write to us to <a href='mailto:kiddo@dataart.com'>kiddo@dataart.com</a> and we will see what can be done.  "
   },
   "ABOUT-DEVELOPERS-PAGE": {
-    "HEADER": "About the developers",
+    "HEADER": "Team",
     "CONTENT-PARAGRAPH-1": "DataArt is an international software developing company never forgetting that it works with people and for people.",
     "CONTENT-PARAGRAPH-2": "20+years of experience, competent teams of engineers from all over the world, a deep knowledge in various business domains and willingness to invest effort in the colleagues’ professional development and education let us come up with non-standard solutions to enhance business processes of our clients and to enable them to expand into new markets. According to the principle of “People first” we are ready to cooperate with businesses of any sizes, introducing no technology restrictions and adapting along with their business growth.",
     "CONTENT-PARAGRAPH-3": "We combine an established technical expertise with human values. Curiosity, empathy, trust, genuineness and intuition are at the company’s core and define relationships with our clients. These qualities help us to generate technical solutions our clients can fully rely on and to establish long-standing relations they confide in.",
-    "CONTENT-PARAGRAPH-4": "Kiddo was created within TalentLab, DataArt internal incubator. Junior developers mentored by their experienced colleagues solve real tasks and create products which work-often to facilitate needs of DataArt itself-in TalentLab."
+    "CONTENT-PARAGRAPH-4": "Kiddo was created within TalentLab, DataArt internal incubator. Junior developers mentored by their experienced colleagues solve real tasks and create products which work — often to facilitate needs of DataArt itself — in TalentLab."
   },
   "CODE-EMBEDDING-PAGE": {
     "HEADER": "Kiddo embed code"
