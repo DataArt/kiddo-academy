@@ -120,12 +120,21 @@
   }
 }
 
+.github-link-wrapper {
+  margin: 6px 10px 0 0;
+  display: none;
+}
+
 @media screen and (max-width: map-get($screen-breakpoints, lg)) {
   .navigation-bar {
     display: none;
   }
 
   .hamburger-menu {
+    display: block;
+  }
+
+  .github-link-wrapper {
     display: block;
   }
 }
