@@ -2,7 +2,6 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { environment } from 'projects/kiddo-academy/src/environments/environment';
-import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
