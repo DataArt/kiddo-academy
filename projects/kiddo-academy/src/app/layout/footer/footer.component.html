@@ -19,7 +19,8 @@
       </div>
       <div class="dropdown-menu dropdown-menu-atop">
         <ul>
-          <li *ngFor="let lang of allLangs" (click)="handleLangChange(lang)">
+          <li *ngFor="let lang of allLangs" (click)="handleLangChange(lang)" class="lang-menu-item">
+            <img class="lang-icon" [src]="'/assets/images/' + lang + '-flag.png'" alt="">
             <span>{{ lang | languageNative | uppercase }}</span>
           </li>
         </ul>
