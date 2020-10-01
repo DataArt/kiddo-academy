@@ -20,12 +20,12 @@ export class AppComponent implements OnInit {
     private googleAnalyticsService: GoogleAnalyticsService,
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.googleAnalyticsService.subscribeToRouterEvents(this.router);
     this.isLoading = true;
 
-    this.i18nService.processLanguageConfiguration()
-      .then(() => this.isLoading = false);
+    await this.i18nService.processLanguageConfiguration();
+    this.isLoading = false;
   }
 
 }

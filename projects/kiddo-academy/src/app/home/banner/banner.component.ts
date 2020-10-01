@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GoogleAnalyticsService } from '../../shared/services';
 import { environment } from 'projects/kiddo-academy/src/environments/environment';
 
@@ -12,13 +12,11 @@ export class BannerComponent {
   @Input() header!: string;
   @Input() buttonText!: string;
   @Input() imageSrc!: string;
-  @Output() buttonClick = new EventEmitter();
 
   constructor(private googleAnalyticsService: GoogleAnalyticsService) { }
 
   onButtonClick(): void {
     this.googleAnalyticsService.emitEvent(environment.googleAnalyticsEvents.buttonClick, 'banner: button_clicked');
-    this.buttonClick.emit();
   }
 
 }

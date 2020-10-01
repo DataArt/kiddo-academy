@@ -120,6 +120,11 @@
   }
 }
 
+.github-link-wrapper {
+  margin: 6px 10px 0 0;
+  display: none;
+}
+
 @media screen and (max-width: map-get($screen-breakpoints, lg)) {
   .navigation-bar {
     display: none;
@@ -128,10 +133,35 @@
   .hamburger-menu {
     display: block;
   }
+
+  .github-link-wrapper {
+    display: block;
+  }
+}
+
+.lang-github {
+  display: flex;
+  justify-content: space-between;
+
+  .github-link {
+    margin: 2px 20px 0 0;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: map-get($screen-breakpoints, sm)) {
   .logo a:nth-last-child(1) {
     display: none;
+  }
+}
+
+@media screen and (min-width: map-get($screen-breakpoints, xxl)) {
+  .lang-github .github-link img {
+    width: 24px;
+    height: 24px;
   }
 }

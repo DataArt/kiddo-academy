@@ -18,21 +18,29 @@
       <li>
         <a href="/task-editor">{{ i18nPrefix + 'ADD_OWN_LEVEL' | translate }}</a>
       </li>
-      <li class="lang-select dropdown" kiddoAcademyDropdown>
-        <div class="dropdown-toggle">
-          <span>{{ currentLang | languageNative | uppercase }}</span>
-          <i class="icon-kiddo-academy-arrow-drop-down"></i>
-        </div>
-        <div class="dropdown-menu">
-          <ul>
-            <li *ngFor="let lang of allLangs" (click)="handleLangChange(lang)" class="lang-menu-item">
-              <img class="lang-icon" [src]="'/assets/images/' + lang + '-flag.png'" alt="">
-              <span> {{ lang | languageNative | uppercase }}</span>
-            </li>
-          </ul>
+      <li class="lang-github">
+        <a class="github-link" target="_blank" href="https://github.com/DataArt/kiddo"><img src="/assets/images/github-mark.png" alt=""></a>
+        <div class="lang-select dropdown" kiddoAcademyDropdown>
+          <div class="dropdown-toggle">
+            <span>{{ currentLang | languageNative | uppercase }}</span>
+            <i class="icon-kiddo-academy-arrow-drop-down"></i>
+          </div>
+          <div class="dropdown-menu">
+            <ul>
+              <li *ngFor="let lang of allLangs" (click)="handleLangChange(lang)" class="lang-menu-item">
+                <img class="lang-icon" [src]="'/assets/images/' + lang + '-flag.png'" alt="">
+                <span> {{ lang | languageNative | uppercase }}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </li>
     </ul>
+  </div>
+  <div class="github-link-wrapper">
+    <a target="_blank" href="https://github.com/DataArt/kiddo">
+      <img width="28" height="28" src="/assets/images/github-mark.png" alt="">
+    </a>
   </div>
   <div class="hamburger-menu dropdown" kiddoAcademyDropdown>
     <div class="dropdown-toggle hamburger-toggle">

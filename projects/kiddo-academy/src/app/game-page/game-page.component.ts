@@ -46,7 +46,6 @@ export class GamePageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.gamePageRef.nativeElement.scrollIntoView();
-    console.log(this.i18nService);
     this.timestamp = this.i18nService.getTimestamp();
 
     const routeParams: Params = { ...this.route.snapshot.params };
@@ -58,15 +57,15 @@ export class GamePageComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  ngAfterViewInit(): void {
-    this.gamePlayerService.getMobileDevicesList()
-      .then(mobileDevicesList => {
-        const mobileDevicesString: string = mobileDevicesList.join('|');
-        const reg = new RegExp(mobileDevicesString + '/i');
-        if (reg.test(navigator.userAgent)) {
-          this.mobileWarningModal.open();
-        }
-      });
+  async ngAfterViewInit(): Promise<void> {
+    const mobileDevicesList = await this.gamePlayerService.getMobileDevicesList();
+      
+    const mobileDevicesString: string = mobileDevicesList.join('|');
+    const regexp = new RegExp(mobileDevicesString + '/i');
+    if (regexp.test(navigator.userAgent)) {
+      this.mobileWarningModal.open();
+    }
+      
   }
 
   ngOnDestroy(): void {
@@ -98,19 +97,19 @@ export class GamePageComponent implements OnInit, AfterViewInit, OnDestroy {
       .finally(() => this.fetchingLevelConfiguration = false);
   }
 
-  private deriveNeighboringLevels(sceneName: string, levelName: string): void {
-    this.scenesService.fetchSceneDetails(sceneName)
-      .then(sceneDetails => {
-        const currentLevelIndex = sceneDetails.tasks.findIndex(level => level === levelName);
-        if (currentLevelIndex !== -1) {
-          this.neighboringLevels.previous = sceneDetails.tasks[currentLevelIndex - 1]
-            ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex - 1]}?levelNumber=${currentLevelIndex}`
-            : '';
-          this.neighboringLevels.next = sceneDetails.tasks[currentLevelIndex + 1]
-            ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex + 1]}?levelNumber=${currentLevelIndex + 2}`
-            : '';
-        }
-      });
+  private async deriveNeighboringLevels(sceneName: string, levelName: string): Promise<void> {
+    const sceneDetails = await this.scenesService.fetchSceneDetails(sceneName);
+      
+    const currentLevelIndex = sceneDetails.tasks.findIndex(level => level === levelName);
+    if (currentLevelIndex !== -1) {
+      this.neighboringLevels.previous = sceneDetails.tasks[currentLevelIndex - 1]
+        ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex - 1]}`
+        : '';
+      this.neighboringLevels.next = sceneDetails.tasks[currentLevelIndex + 1]
+        ? `/play/${sceneName}/${sceneDetails.tasks[currentLevelIndex + 1]}`
+        : '';
+    }
+      
   }
 
   private setBreadCrumbsData(sceneName: string, level: string): void {

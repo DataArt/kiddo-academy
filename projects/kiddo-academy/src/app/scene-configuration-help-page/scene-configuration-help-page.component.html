@@ -30,7 +30,7 @@
         <h2 [attr.id]="scene">{{ 'SCENE_TYPE.' + scene | uppercase | translate | titlecase }}</h2>
         <markdown
           [src]="i18nPrefixPath + (scene | uppercase) + '_HELP' | translate : { assetsPath: env.playerAssetsUrl, timestamp: timestamp }"
-          (load)="onMarkdownLoad($event)"
+          (load)="onMarkdownLoad()"
         >
         </markdown>
       </div>

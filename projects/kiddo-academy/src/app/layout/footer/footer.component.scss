@@ -68,6 +68,22 @@
   color: #788285;
 }
 
+.lang-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: space-around; 
+  
+  .lang-icon {
+    width: 25%;
+    padding: 0px;
+  }
+
+  span {
+    width: 40%;
+  }
+}
+
 @media screen and (max-width: map-get($screen-breakpoints, sm)) {
   .about-links {
     display: block;
