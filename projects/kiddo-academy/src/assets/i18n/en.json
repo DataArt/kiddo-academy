@@ -106,7 +106,8 @@
   "SCENE-CONFIGURATION-HELP-PAGE": {
     "HEADER": "Help",
     "RACCOON_HELP": "{{ assetsPath }}/files/editor/helpInitialRaccoonEn.md?timestamp={{ timestamp }}",
-    "CONSOLE_HELP": "{{ assetsPath }}/files/editor/helpInitialConsoleEn.md?timestamp={{ timestamp }}"
+    "CONSOLE_HELP": "{{ assetsPath }}/files/editor/helpInitialConsoleEn.md?timestamp={{ timestamp }}",
+    "PANDEMIC_HERO_HELP": "{{ assetsPath }}/files/editor/helpInitialPandemicEn.md?timestamp={{ timestamp }}"
   },
   "MARKDOWN": {
     "CODE_EMBEDDING_MANUAL_TEST": "{{ domain }}/assets/files/code-embedding-manual-en(test).md?timestamp={{ timestamp }}",
