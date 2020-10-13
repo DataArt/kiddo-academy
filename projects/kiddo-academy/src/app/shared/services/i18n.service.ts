@@ -36,8 +36,8 @@ export class I18nService {
       this.translateService.setDefaultLang(browserLang);
       this.translateService.use(browserLang);
     } else {
-      this.translateService.setDefaultLang('ru');
-      this.translateService.use('ru');
+      this.translateService.setDefaultLang('en');
+      this.translateService.use('en');
     }
 
 
