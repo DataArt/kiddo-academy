@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:test": "ng build --configuration=test --extractCss=false --output-hashing none",
+    "build:dev": "ng build --configuration=dev --extractCss=false --output-hashing none",
     "build:prod": "ng build --prod --extractCss=false --output-hashing none",
     "test": "ng test",
     "lint": "ng lint",
