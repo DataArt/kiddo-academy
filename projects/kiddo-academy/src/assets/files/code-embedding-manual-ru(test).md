@@ -77,7 +77,7 @@ HTML-файл можно скачать по этой <a href="/player/assets/fi
     initialScript: |-
       import raccoon
 
-      # Add your code here
+      # Добавь код здесь
     taskDescription: Доведи енота до флага
     `;
 
