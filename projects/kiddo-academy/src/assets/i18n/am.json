@@ -1,4 +1,9 @@
 {
+  "SCENE_TYPE": {
+    "RACCOON": "Ջրարջ",
+    "CONSOLE": "Վահանակ",
+    "PANDEMIC_HERO": "Համաճարակի հերոս"
+  },
   "HEADER": {
     "ABOUT_DEVELOPERS": "Մշակողների մասին",
     "ABOUT_PROJECT": "Նախագծի մասին",
