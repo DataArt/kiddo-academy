@@ -10,8 +10,15 @@
   overflow: hidden;
 }
 
-.scene-details img {
-  width: 49%;
+.scene-details .image-wrapper  {
+  width: 40%;
+  display: flex;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+  }
+  
 }
 
 .levels-number {
@@ -31,7 +38,7 @@
 .scene-description {
   display: flex;
   flex-direction: column;
-  width: 49%;
+  width: 60%;
 }
 
 .scene-description h1 {
