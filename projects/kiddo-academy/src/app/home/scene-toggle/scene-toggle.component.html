@@ -10,12 +10,14 @@
         </span>
       </div>
       <div>
-        <h1>{{ i18nPrefix + selectedScene.title | uppercase | translate | titlecase }}</h1>
+        <h2>{{ i18nPrefix + selectedScene.title | uppercase | translate | titlecase }}</h2>
         <p>{{ i18nPrefix + selectedScene.description | uppercase | translate }}</p>
       </div>
     </div>
-
-    <img src="{{ selectedScene.imageUrl }}" alt="{{ i18nPrefix + selectedScene.title | uppercase | translate | titlecase }}">
+    <div class="image-wrapper">
+      <img src="{{ selectedScene.imageUrl }}" alt="{{ i18nPrefix + selectedScene.title | uppercase | translate | titlecase }}">
+    </div>
+    
   </div>
 
   <div class="tabs-toggle-group">
