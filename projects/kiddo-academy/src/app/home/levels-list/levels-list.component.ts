@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'kiddo-academy-levels-list',
   templateUrl: './levels-list.component.html',
-  styleUrls: ['./levels-list.component.scss']
+  styleUrls: ['./levels-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LevelsListComponent implements OnInit {
 
