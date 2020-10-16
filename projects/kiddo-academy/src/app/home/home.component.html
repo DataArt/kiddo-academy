@@ -24,7 +24,7 @@
         (sceneSelected)="handleSceneTypeChange($event)">
       </kiddo-academy-scene-toggle>
 
-      <h2 *ngIf="scenesList.length !== 0">{{ i18nPrefix + 'LEVELS' | translate }}</h2>
+      <h2 *ngIf="!isFetchingTasks && scenesList.length !== 0 && selectedScene.tasks.length !== 0">{{ i18nPrefix + 'LEVELS' | translate }}</h2>
 
       <kiddo-academy-levels-list *ngIf="!isFetchingTasks && scenesList.length !== 0" [tasksList]="selectedScene.tasks"></kiddo-academy-levels-list>
     </section>
