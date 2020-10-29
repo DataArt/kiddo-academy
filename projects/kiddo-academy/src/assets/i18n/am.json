@@ -73,7 +73,8 @@
     "TOOLTIP": {
       "PREVIOUS_LEVEL": "Նախորդ մակարդակ",
       "NEXT_LEVEL": "Հաջորդ մակարդակը"
-    }
+    },
+    "LEVEL_FETCH_ERROR": "Սխալ բեռնման մակարդակը"
   },
   "TASK-EDITOR": {
     "TITLE": "Ավելացնել իմ մակարդակը",
