@@ -70,7 +70,8 @@
     "TOOLTIP": {
       "PREVIOUS_LEVEL": "Попередній рівень",
       "NEXT_LEVEL": "Наступний рівень"
-    }
+    },
+    "LEVEL_FETCH_ERROR": "Помилка при завантаженні рівня"
   },
   "TASK-EDITOR": {
     "TITLE": "Додати свій рівень",
