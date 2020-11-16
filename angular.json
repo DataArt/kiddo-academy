@@ -69,15 +69,15 @@
                 }
               ]
             },
-            "test": {
+            "dev": {
               "fileReplacements": [
                 {
                   "replace": "projects/kiddo-academy/src/environments/environment.ts",
-                  "with": "projects/kiddo-academy/src/environments/environment.test.ts"
+                  "with": "projects/kiddo-academy/src/environments/environment.dev.ts"
                 }
               ],
               "index": { 
-                "input": "projects/kiddo-academy/src/index.test.html",
+                "input": "projects/kiddo-academy/src/index.dev.html",
                 "output": "index.html"
               },
               "optimization": true,
