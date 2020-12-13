@@ -116,3 +116,19 @@
     display: none;
   }
 }
+
+.ugly-new-year-banner {
+  margin-top: 3rem;
+  background: red;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  color: white;
+  font-size: 2rem;
+
+  &:hover {
+    color: black;
+    background: darkviolet;
+    transform: scale(1.1);
+  }
+}

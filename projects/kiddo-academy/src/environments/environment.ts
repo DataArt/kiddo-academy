@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  sceneTypesUrl: '//localhost:91',
+  sceneTypesUrl: 'http://localhost:8080/src',
   playerUrl: '//192.168.198.139/kiddo-player.js',
   playerAssetsUrl: '//192.168.198.139/assets',
   localStorageKeys: {
