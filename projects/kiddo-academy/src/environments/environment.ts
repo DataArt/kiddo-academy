@@ -2,11 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// local enviroment aka localhost:4200
 export const environment = {
   production: false,
-  sceneTypesUrl: 'http://localhost:8080/src',
-  playerUrl: '//192.168.198.139/kiddo-player.js',
-  playerAssetsUrl: '//192.168.198.139/assets',
+  sceneTypesUrl: '//localhost:8080/src',
+  playerUrl: '//localhost:8080/elements/kiddo-player.js',
+  playerAssetsUrl: '//localhost:8080/elements/assets',
   localStorageKeys: {
     selectedLanguage: 'kiddoAcademyLanguage',
     lastSelectedSceneTabNumber: 'kiddo-academy_last-selected-tab',

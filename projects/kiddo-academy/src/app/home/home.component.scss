@@ -117,18 +117,22 @@
   }
 }
 
-.ugly-new-year-banner {
+.christmas-tree-banner-anchor {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5rem;
   margin-top: 3rem;
-  background: red;
-  padding: 1rem;
-  border-radius: 1rem;
+}
 
-  color: white;
-  font-size: 2rem;
+.christmas-tree-banner {
+  height: 10rem;
+  width: 10rem;
+  border: 0.2rem dotted #04A87D;
+  border-radius: 5rem;
+  transition: all 0.2s;
 
   &:hover {
-    color: black;
-    background: darkviolet;
-    transform: scale(1.1);
+    border: 0.25rem dotted #D8422D;
+    transform: scale(1.05);
   }
 }
