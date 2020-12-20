@@ -10,6 +10,7 @@ import { TaskEditorPageComponent } from './task-editor-page/task-editor-page.com
 import { CodeEmbeddingPageComponent } from './code-embedding-page/code-embedding-page.component';
 import { LevelTestingPageComponent } from './level-testing-page/level-testing-page.component';
 import { SceneConfigurationHelpPageComponent } from './scene-configuration-help-page/scene-configuration-help-page.component';
+import { NewYearPageComponent } from './new-year-page/new-year-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'about-project', component: AboutProjectPageComponent },
   { path: 'embed-code', component: CodeEmbeddingPageComponent },
   { path: 'launch-level', component: LevelTestingPageComponent },
+  { path: 'new-year', component: NewYearPageComponent },
   { path: '404', component: PageNotFoundComponent },
   { path: '**', redirectTo: '404' },
 ];

@@ -28,6 +28,7 @@ import 'brace/mode/javascript';
 import 'brace/mode/yaml';
 import 'brace/theme/tomorrow_night_eighties';
 import { SceneConfigurationHelpPageComponent } from './scene-configuration-help-page/scene-configuration-help-page.component';
+import { NewYearPageComponent } from './new-year-page/new-year-page.component';
 
 const DEFAULT_ACE_CONFIG: AceConfigInterface = {
   fontSize: 'inherit',
@@ -56,7 +57,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     TaskEditorPageComponent,
     CodeEmbeddingPageComponent,
     LevelTestingPageComponent,
-    SceneConfigurationHelpPageComponent
+    SceneConfigurationHelpPageComponent,
+    NewYearPageComponent
   ],
   imports: [
     BrowserModule,
