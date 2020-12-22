@@ -66,7 +66,8 @@
     "SCENE_TYPE": {
       "RACCOON": "Ջրարջ",
       "CONSOLE": "Վահանակ",
-      "PANDEMIC_HERO": "Համաճարակի հերոս"
+      "PANDEMIC_HERO": "Համաճարակի հերոս",
+      "NEW_YEAR": "Նոր Տարի"
     },
     "LEVEL": "Մակարդակ",
     "USING_MOBILE_WARNING": "Եթե մուտք ես գործում բջջային հեռախոսից, և էջը ձեզ անհարմար է թվում, ապա իմացիր ՝ այդպես էլ կա՛: Խնդրում ենք պատճենել այդ հղումը և մուտք գործել քո համակարգչից:  Հեռախոսով կոդավորումը չափազանց անհարմար է, այնպես որ կարող ես առավելագույնս հարմարավետ պայմաններ վայեկես, եթե բացես տվյալ էջի ամբողջական տարբերակը:",
@@ -112,5 +113,10 @@
   "MARKDOWN": {
     "CODE_EMBEDDING_MANUAL_TEST": "{{ domain }}/assets/files/code-embedding-manual-am(test).md?timestamp={{ timestamp }}",
     "CODE_EMBEDDING_MANUAL_PROD": "{{ domain }}/assets/files/code-embedding-manual-am(prod).md?timestamp={{ timestamp }}"
+  },
+  "NEW-YEAR": {
+    "PAGE_TITLE": "New year",
+    "PAGE_SUBTITLE": "The Raccoon prepares for holidays! Help him solve the new year tasks!",
+    "PAGE_DESCRIPTION": "It is miracle time! We've created special levels in the theme of New Year! The Raccoon is going to get to the christmas tree in search of gifts, making his way through mazes and dodging creepy monsters. We believe you can save the holiday!"
   }
 }

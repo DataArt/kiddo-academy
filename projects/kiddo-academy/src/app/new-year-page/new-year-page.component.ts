@@ -12,6 +12,7 @@ export class NewYearPageComponent implements OnInit, OnDestroy {
   isFetching = false;
   newYearScene?: SceneDetails;
   readonly homeI18nPrefix = 'HOME.';
+  readonly newYearI18Prefix = 'NEW-YEAR.';
   private readonly sceneName = 'new_year';
   private removeLangChangeListener!: () => void;
 

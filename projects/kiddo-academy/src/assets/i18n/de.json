@@ -54,7 +54,8 @@
     "SCENE_TYPE": {
       "RACCOON": "Waschbär",
       "CONSOLE": "Konsole",
-      "PANDEMIC_HERO": "Pandemie-Held"
+      "PANDEMIC_HERO": "Pandemie-Held",
+      "NEW_YEAR": "Neujahr"
     },
     "LEVEL": "Niveau",
     "USING_MOBILE_WARNING": "TODO: translate. Если ты заходишь с мобильного телефона и страница кажется тебе неудобной, знай - так оно и есть! Пожалуйста, скопируй эту <a href='{{ link }}'>ссылку</a> и зайди с компьютера. Кодить с телефона крайне неудобно, поэтому получить максимум удовольствия ты сможешь, если откроешь полную версию этой страницы.",
@@ -92,5 +93,10 @@
   },
   "SCENE-CONFIGURATION-HELP-PAGE": {
     "HEADER": "Помощь"
+  },
+  "NEW-YEAR": {
+    "PAGE_TITLE": "New year",
+    "PAGE_SUBTITLE": "The Raccoon prepares for holidays! Help him solve the new year tasks!",
+    "PAGE_DESCRIPTION": "It is miracle time! We've created special levels in the theme of New Year! The Raccoon is going to get to the christmas tree in search of gifts, making his way through mazes and dodging creepy monsters. We believe you can save the holiday!"
   }
 }
