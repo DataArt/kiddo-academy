@@ -63,7 +63,8 @@
     "SCENE_TYPE": {
       "RACCOON": "Єнот",
       "CONSOLE": "Консоль",
-      "PANDEMIC_HERO": "Герой пандемії"
+      "PANDEMIC_HERO": "Герой пандемії",
+      "NEW_YEAR": "Новий рік"
     },
     "LEVEL": "Рівень",
     "USING_MOBILE_WARNING": "Якщо ти заходиш з мобільного телефону і сторінка здається тобі незручною, знай — так і є! Будь ласка, скопіюй це посилання та зайди з комп'ютера. Кодити з телефону вкрай незручно. Отримати максимум задоволення ти зможеш, якщо відкриєш повну версію цієї сторінки.",
@@ -109,5 +110,10 @@
   "MARKDOWN": {
     "CODE_EMBEDDING_MANUAL_TEST": "{{ domain }}/assets/files/code-embedding-manual-ua(test).md?timestamp={{ timestamp }}",
     "CODE_EMBEDDING_MANUAL_PROD": "{{ domain }}/assets/files/code-embedding-manual-ua(prod).md?timestamp={{ timestamp }}"
+  },
+  "NEW-YEAR": {
+    "PAGE_TITLE": "New year",
+    "PAGE_SUBTITLE": "The Raccoon prepares for holidays! Help him solve the new year tasks!",
+    "PAGE_DESCRIPTION": "It is miracle time! We've created special levels in the theme of New Year! The Raccoon is going to get to the christmas tree in search of gifts, making his way through mazes and dodging creepy monsters. We believe you can save the holiday!"
   }
 }

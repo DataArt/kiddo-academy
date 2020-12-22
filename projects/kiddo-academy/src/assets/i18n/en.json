@@ -66,7 +66,8 @@
     "SCENE_TYPE": {
       "RACCOON": "Raccoon",
       "CONSOLE": "Console",
-      "PANDEMIC_HERO": "Pandemic hero"
+      "PANDEMIC_HERO": "Pandemic hero",
+      "NEW_YEAR": "New year"
     },
     "LEVEL": "Level",
     "USING_MOBILE_WARNING": "If you log in using your mobile and the page looks inconvenient to use, beware, it does not just seem to be such but it really is! Please, copy the <a href='{{ link }}'>link</a> to log in using your desktop. By using the mobile you will never get the same pleasure as you could using your desktop and opening the page full version.",
@@ -112,5 +113,10 @@
   "MARKDOWN": {
     "CODE_EMBEDDING_MANUAL_TEST": "{{ domain }}/assets/files/code-embedding-manual-en(test).md?timestamp={{ timestamp }}",
     "CODE_EMBEDDING_MANUAL_PROD": "{{ domain }}/assets/files/code-embedding-manual-en(prod).md?timestamp={{ timestamp }}"
+  },
+  "NEW-YEAR": {
+    "PAGE_TITLE": "New year",
+    "PAGE_SUBTITLE": "The Raccoon prepares for holidays! Help him solve the new year tasks!",
+    "PAGE_DESCRIPTION": "It is miracle time! We've created special levels in the theme of New Year! The Raccoon is going to get to the christmas tree in search of gifts, making his way through mazes and dodging creepy monsters. We believe you can save the holiday!"
   }
 }
