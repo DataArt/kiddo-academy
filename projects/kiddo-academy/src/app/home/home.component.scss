@@ -116,3 +116,23 @@
     display: none;
   }
 }
+
+.christmas-tree-banner-anchor {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5rem;
+  margin-top: 3rem;
+}
+
+.christmas-tree-banner {
+  height: 10rem;
+  width: 10rem;
+  border: 0.2rem dotted #04A87D;
+  border-radius: 5rem;
+  transition: all 0.2s;
+
+  &:hover {
+    border: 0.25rem dotted #D8422D;
+    transform: scale(1.05);
+  }
+}

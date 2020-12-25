@@ -1,0 +1,11 @@
+<section class="new-year-page-wrapper">
+  <h1 class="new-year-header">{{ newYearI18Prefix + 'PAGE_TITLE' | translate }}</h1>
+  <h3>{{ newYearI18Prefix + 'PAGE_SUBTITLE' | translate }}</h3>
+  <p>
+    {{ newYearI18Prefix + 'PAGE_DESCRIPTION' | translate }}
+  </p>
+
+  <h2>{{ homeI18nPrefix + 'LEVELS' | translate }}</h2>
+
+  <kiddo-academy-levels-list *ngIf="newYearScene" [tasksList]="newYearScene!.tasks"></kiddo-academy-levels-list>
+</section>

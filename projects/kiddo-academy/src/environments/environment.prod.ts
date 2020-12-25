@@ -1,3 +1,4 @@
+// production enviroment aka kiddo.academy
 export const environment = {
   production: true,
   sceneTypesUrl: '/tasks/src',
