@@ -7,7 +7,7 @@
         <span>{{ i18nPrefix + 'ABOUT_PROJECT' | translate | uppercase }}</span>
         <i class="icon-kiddo-academy-arrow-right"></i>
       </a>
-      <a class="btn christmas-tree-banner-anchor" routerLink="/new-year">
+      <a *ngIf="isNewYear" class="btn christmas-tree-banner-anchor" routerLink="/new-year">
         <img class="christmas-tree-banner" src="/assets/images/christmas-tree.svg" alt="New year banner">
       </a>
     </article>

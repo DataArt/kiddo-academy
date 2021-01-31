@@ -1,3 +1,4 @@
+import { NewYearService } from './../shared/services/new-year.service';
 import { Component, OnInit, ViewChild, Renderer2, OnDestroy } from '@angular/core';
 import { ModalDirective } from '../shared/directives/modal.directive';
 import { ScenesService } from '../shared/services/scenes.service';
@@ -19,9 +20,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   readonly i18nPrefix = 'HOME.';
   private removeLangChangeListener!: () => void;
 
+  get isNewYear(): boolean {
+    return this.newYearService.isNewYear();
+  }
+
   constructor(
     private renderer: Renderer2,
     private scenesService: ScenesService,
+    private newYearService: NewYearService,
   ) { }
 
   ngOnInit(): void {

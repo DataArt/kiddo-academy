@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { I18nService } from '../../shared/services/i18n.service';
-import { GoogleAnalyticsService } from '../../shared/services';
+import { GoogleAnalyticsService, NewYearService } from '../../shared/services';
 import { environment } from 'projects/kiddo-academy/src/environments/environment';
 
 @Component({
@@ -21,9 +21,15 @@ export class HeaderComponent {
     return this.i18nService.getCurrentLanguage();
   }
 
+  get logoUrl(): string {
+    const logoFileName = this.newYearService.isNewYear() ? 'logo-new-year' : 'logo-left';
+    return `/assets/images/${logoFileName}.svg`;
+  }
+
   constructor(
     private i18nService: I18nService,
     private googleAnalyticsService: GoogleAnalyticsService,
+    private newYearService: NewYearService,
   ) { }
 
   handleLangChange(lang: string): void {
